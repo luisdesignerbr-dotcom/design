@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Programa de Estágio Ecom 2027 | Fluir comunica</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1a0638;--deep:#440d82;--vio:#653fe0;--lav:#dde1f8;--lime:#e0e41e;--glass:rgba(255,255,255,.1)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins','Segoe UI',Arial,sans-serif;background:var(--ink);color:#fff;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+
+/* HERO: malha de gradientes animada + grafismo em SVG */
+.hero{position:relative;min-height:100vh;display:grid;place-items:center;padding:96px 6vw 64px;overflow:hidden;
+ background:radial-gradient(60% 60% at 15% 10%,#7a5cf0 0,transparent 60%),radial-gradient(50% 50% at 90% 85%,#653fe0 0,transparent 60%),linear-gradient(160deg,#2a0856,#440d82 55%,#1a0638)}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;animation:drift 14s ease-in-out infinite alternate}
+.b1{width:42vw;height:42vw;background:#653fe0;top:-12vw;left:-8vw}
+.b2{width:30vw;height:30vw;background:#e0e41e;opacity:.18;bottom:-10vw;right:12vw;animation-delay:-6s}
+@keyframes drift{to{transform:translate(6vw,4vw) scale(1.15)}}
+.lines{position:absolute;inset:0;width:100%;height:100%;opacity:.5}
+.lines rect{fill:none;stroke:#b9a9ff;stroke-width:1;stroke-dasharray:1800;stroke-dashoffset:1800;animation:draw 3.5s ease forwards}
+.lines rect:nth-child(2){animation-delay:.3s}.lines rect:nth-child(3){animation-delay:.6s}.lines rect:nth-child(4){animation-delay:.9s}
+@keyframes draw{to{stroke-dashoffset:0}}
+nav{position:absolute;top:0;left:0;right:0;padding:24px 6vw;display:flex;justify-content:space-between;align-items:center;font-weight:300;letter-spacing:.18em;font-size:.8rem;text-transform:uppercase}
+nav b{font-weight:600;letter-spacing:.3em}
+.wrap{position:relative;z-index:2;max-width:1180px;width:100%;display:grid;grid-template-columns:1.15fr .85fr;gap:5vw;align-items:center}
+.eyebrow{display:inline-flex;gap:.6rem;align-items:center;padding:.5rem 1rem;border-radius:99px;background:var(--glass);border:1px solid rgba(255,255,255,.25);backdrop-filter:blur(10px);font-size:.85rem}
+.eyebrow i{width:8px;height:8px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 0 var(--lime);animation:pulse 2s infinite}
+@keyframes pulse{to{box-shadow:0 0 0 10px transparent}}
+h1{font-weight:200;line-height:.9;margin:1.4rem 0 1rem}
+h1 small{display:block;font-size:clamp(1rem,2vw,1.5rem);font-weight:400;margin-bottom:.4rem}
+h1 .big{display:block;font-size:clamp(4rem,12vw,10rem);letter-spacing:-.04em}
+h1 .yr{display:inline-block;font-size:clamp(3rem,8vw,6.5rem);color:transparent;-webkit-text-stroke:1.5px var(--lime);letter-spacing:.02em}
+.lead{max-width:34rem;font-weight:300;font-size:1.1rem;line-height:1.7;color:#e6e0ff}
+.cta{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2rem}
+.btn{display:inline-flex;align-items:center;gap:.6rem;padding:1rem 1.8rem;border-radius:99px;font-weight:600;border:0;cursor:pointer;font:600 1rem 'Poppins',sans-serif;transition:transform .25s,box-shadow .25s}
+.btn.pri{background:var(--lime);color:var(--deep);box-shadow:0 10px 30px -8px rgba(224,228,30,.6)}
+.btn.sec{background:var(--glass);color:#fff;border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(10px)}
+.btn:hover{transform:translateY(-3px)}
+.count{display:flex;gap:.8rem;margin-top:2.2rem}
+.count div{min-width:74px;padding:.8rem;border-radius:16px;background:var(--glass);border:1px solid rgba(255,255,255,.18);text-align:center;backdrop-filter:blur(10px)}
+.count b{display:block;font-size:1.9rem;font-weight:300;font-variant-numeric:tabular-nums}
+.count span{font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;opacity:.75}
+.photo{position:relative;transform-style:preserve-3d;transition:transform .15s}
+.photo img{width:100%;display:block;border-radius:32px 32px 160px 32px;box-shadow:0 40px 80px -20px rgba(0,0,0,.6);border:1px solid rgba(255,255,255,.3)}
+.tag{position:absolute;left:-6%;bottom:12%;padding:.9rem 1.2rem;border-radius:18px;background:rgba(255,255,255,.92);color:var(--deep);font-weight:600;font-size:.9rem;box-shadow:0 20px 40px -10px rgba(0,0,0,.4);animation:float 5s ease-in-out infinite alternate}
+.tag small{display:block;font-weight:300;font-size:.7rem}
+@keyframes float{to{transform:translateY(-12px)}}
+
+/* SEÇÕES */
+section.s{padding:110px 6vw;max-width:1180px;margin:auto}
+h2{font-weight:200;font-size:clamp(2rem,5vw,3.6rem);letter-spacing:-.02em;margin-bottom:.6rem}
+h2 b{font-weight:600;color:var(--lime)}
+.sub{color:#cfc6f5;font-weight:300;margin-bottom:3rem}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;position:relative}
+.step{padding:1.6rem 1.2rem;border-radius:22px;background:linear-gradient(160deg,rgba(255,255,255,.12),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.14);transition:transform .3s,border-color .3s}
+.step:hover{transform:translateY(-8px);border-color:var(--lime)}
+.step em{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--lime);color:var(--deep);font-style:normal;font-weight:600;margin-bottom:1rem}
+.step b{display:block;font-weight:600;margin-bottom:.3rem}
+.step span{font-weight:300;font-size:.85rem;color:#cfc6f5}
+.chips{display:flex;flex-wrap:wrap;gap:.7rem}
+.chips span{padding:.7rem 1.3rem;border-radius:99px;border:1px solid rgba(255,255,255,.25);background:var(--glass);font-weight:300;transition:.25s}
+.chips span:hover{background:var(--lime);color:var(--deep);transform:scale(1.06)}
+.final{margin:0 6vw 80px;padding:90px 6vw;border-radius:40px;text-align:center;position:relative;overflow:hidden;background:linear-gradient(120deg,#653fe0,#440d82 50%,#2a0856)}
+.final h2{position:relative}.final .cta{justify-content:center;position:relative}
+footer{padding:40px 6vw;text-align:center;font-weight:300;font-size:.8rem;color:#a89ad6}
+
+/* animação de entrada ao rolar */
+.rv{opacity:0;transform:translateY(40px);transition:opacity .9s,transform .9s}
+.rv.in{opacity:1;transform:none}
+@media(max-width:900px){.wrap{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.tag{left:4%}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="blob b1"></div><div class="blob b2"></div>
+  <svg class="lines" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <rect x="-300" y="60" width="900" height="780" rx="390"/><rect x="-240" y="120" width="780" height="660" rx="330"/>
+    <rect x="-180" y="180" width="660" height="540" rx="270"/><rect x="-120" y="240" width="540" height="420" rx="210"/>
+  </svg>
+  <nav><b>Fluir</b><span>comunica</span></nav>
+
+  <div class="wrap">
+    <div>
+      <span class="eyebrow"><i></i>Time Ecom, as inscrições estão abertas!</span>
+      <h1><small>programa de</small><span class="big">estágio</span><span class="yr">2027</span></h1>
+      <p class="lead">O próximo talento da Ecom pode estar na sua rede. Conhece alguém com vontade de aprender, inovar e dar os primeiros passos na carreira?</p>
+      <div class="cta">
+        <a class="btn pri" href="https://SEU-LINK-DAS-VAGAS.com.br">Ver vagas &rarr;</a>
+        <button class="btn sec" id="share">Compartilhar com sua rede</button>
+      </div>
+      <div class="count" id="count" aria-live="polite"></div>
+    </div>
+    <div class="photo" id="photo">
+      <img src="images/foto-hero.jpg" alt="Estagiária sorrindo, apoiada na mão, em um escritório">
+      <div class="tag">Inscrições<small>26/10 a 08/11</small></div>
+    </div>
+  </div>
+</header>
+
+<section class="s rv">
+  <h2>Como <b>funciona</b></h2>
+  <p class="sub">Do clique na inscrição ao primeiro dia de trabalho.</p>
+  <div class="steps">
+    <div class="step"><em>1</em><b>Inscrições</b><span>26/10 a 08/11</span></div>
+    <div class="step"><em>2</em><b>Dinâmica online</b><span>Novembro</span></div>
+    <div class="step"><em>3</em><b>Avaliação com gestor</b><span>Dezembro</span></div>
+    <div class="step"><em>4</em><b>Processo admissional</b><span>Dez a Jan</span></div>
+    <div class="step"><em>5</em><b>Início</b><span>01/02/2027</span></div>
+  </div>
+</section>
+
+<section class="s rv">
+  <h2>Oito <b>áreas</b> para começar</h2>
+  <p class="sub">A área de preferência é indicada na inscrição.</p>
+  <div class="chips">
+    <span>Financeiro</span><span>FP&amp;A</span><span>Gestão de Energia</span><span>Infraestrutura e Operações</span>
+    <span>Marketing</span><span>Relacionamento</span><span>Renováveis</span><span>Soluções Digitais e IA</span>
+  </div>
+</section>
+
+<div class="final rv">
+  <h2>Compartilhe e ajude essa oportunidade<br>a chegar <b>ainda mais longe</b></h2>
+  <div class="cta">
+    <a class="btn pri" href="https://SEU-LINK-DAS-VAGAS.com.br">Conhecer as oportunidades</a>
+    <button class="btn sec" id="share2">Copiar link</button>
+  </div>
+</div>
+<footer>Ecom &middot; Fluir comunica</footer>
+
+<script>
+// contagem regressiva (abre em 26/10/2026, fecha em 08/11/2026)
+const open=new Date('2026-10-26T00:00:00'), close=new Date('2026-11-09T00:00:00'), box=document.getElementById('count');
+function tick(){
+  const now=new Date(); let t,label;
+  if(now<open){t=open-now;label='abrem em'}else if(now<close){t=close-now;label='encerram em'}else{box.textContent='Inscrições encerradas';return}
+  const d=Math.floor(t/864e5),h=Math.floor(t/36e5)%24,m=Math.floor(t/6e4)%60,s=Math.floor(t/1e3)%60;
+  box.innerHTML=[['dias',d],['horas',h],['min',m],['seg',s]].map(([l,v])=>`<div><b>${String(v).padStart(2,'0')}</b><span>${l}</span></div>`).join('');
+  box.title='Inscrições '+label;
+}
+tick();setInterval(tick,1000);
+// compartilhar: menu nativo no celular, copiar link no desktop
+async function share(){
+  const data={title:'Programa de Estágio Ecom 2027',text:'Inscrições abertas de 26/10 a 08/11!',url:location.href};
+  if(navigator.share){try{await navigator.share(data);return}catch(e){}}
+  try{await navigator.clipboard.writeText(data.url);alert('Link copiado!')}catch(e){}
+}
+['share','share2'].forEach(id=>document.getElementById(id).onclick=share);
+// revelar ao rolar
+const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('in')),{threshold:.15});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+// inclinação 3D da foto seguindo o mouse (desktop)
+const p=document.getElementById('photo');
+addEventListener('mousemove',e=>{const x=(e.clientX/innerWidth-.5)*8,y=(e.clientY/innerHeight-.5)*-8;p.style.transform=`perspective(900px) rotateY(${x}deg) rotateX(${y}deg)`});
+</script>
+</body>
+</html>
