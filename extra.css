@@ -1,0 +1,83 @@
+/* extra.css — carregado DEPOIS do styles.css.
+   Contém: seletor de idioma, foto do About, educação/idiomas, depoimentos e páginas de projeto. */
+
+/* ---------- Seletor de idioma ---------- */
+.lang-switch{display:flex;align-items:center;gap:6px;font:10px var(--mono);letter-spacing:.06em}
+.lang-switch button{background:none;border:0;padding:6px 2px;font:inherit;letter-spacing:inherit;color:var(--muted);cursor:pointer;border-bottom:1px solid transparent;transition:color .2s}
+.lang-switch button:hover{color:var(--ink)}
+.lang-switch button[aria-pressed="true"]{color:var(--ink);border-bottom-color:var(--ink)}
+.lang-switch i{font-style:normal;color:#bdbab0}
+
+/* ---------- About: foto ---------- */
+.portrait-placeholder{aspect-ratio:.92}
+.portrait-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:3;background:var(--orange)}
+.about-handle{display:inline-block;margin-top:22px;font:10px var(--mono);letter-spacing:.04em;padding-bottom:4px;border-bottom:1px solid #d0cdc3;transition:opacity .2s}
+.about-handle:hover{opacity:.55}
+.text-link .text-link-label{display:inline-flex;gap:26px;align-items:center;font-size:12px;color:var(--ink)}
+.text-link .text-link-label span{font-size:18px;color:var(--orange)}
+
+/* ---------- Experiência / Educação / Idiomas ---------- */
+.sub-heading{margin-top:110px}
+.job.edu .job-org{font-weight:500;color:var(--muted);font-size:12px;line-height:1.6;margin:0;max-width:540px}
+.job.edu h3{margin-bottom:6px}
+.lang-block{display:grid;grid-template-columns:1fr 2.2fr 35px;gap:25px;padding:30px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.lang-block .cap-label{margin:0}
+.lang-block ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px 34px;font-size:12px;font-weight:600}
+
+/* ---------- Depoimentos ---------- */
+.testimonials{padding-top:130px;padding-bottom:130px}
+.quote-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px 7%;border-top:1px solid var(--line);padding-top:55px}
+.quote{margin:0;display:flex;flex-direction:column;justify-content:space-between;gap:38px}
+.quote blockquote{margin:0;font-size:clamp(16px,1.6vw,21px);line-height:1.55;letter-spacing:-.04em}
+.quote figcaption{display:flex;align-items:center;gap:16px}
+.avatar{position:relative;width:62px;height:62px;border-radius:50%;border:1px solid var(--orange);display:grid;place-items:center;font:11px var(--mono);color:var(--orange);overflow:hidden;flex-shrink:0}
+.avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:var(--paper)}
+.quote-name{display:block;font-size:13px;font-weight:700;color:var(--orange);margin-bottom:6px}
+.quote-role{font:9px/1.6 var(--mono);letter-spacing:.04em;color:var(--muted);margin:0}
+
+/* ---------- Páginas de projeto ---------- */
+.project-hero{padding-top:36px;padding-bottom:60px}
+.back-link{font:10px var(--mono);letter-spacing:.06em;color:var(--muted);transition:color .2s}
+.back-link:hover{color:var(--ink)}
+.project-hero .eyebrow{margin:90px 0 20px}
+.project-hero h1{font-size:clamp(44px,8vw,116px);line-height:.92;letter-spacing:-.085em;font-weight:600;margin:0 0 55px;max-width:1100px}
+.project-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;border-top:1px solid var(--line);padding-top:20px;margin:0}
+.project-facts dt{font:9px var(--mono);letter-spacing:.08em;color:var(--muted);margin-bottom:8px;text-transform:uppercase}
+.project-facts dd{margin:0;font-size:13px;font-weight:600}
+.project-cover{padding-bottom:70px}
+.project-cover img,.gallery-item img{display:block;width:100%;height:auto;background:#e5e0d4}
+.project-body{display:grid;grid-template-columns:1fr 2.2fr;gap:25px;padding-bottom:90px}
+.project-body .eyebrow{margin:6px 0 0}
+.project-body p:not(.eyebrow){font-size:clamp(17px,2vw,24px);line-height:1.5;letter-spacing:-.04em;max-width:720px;margin:0}
+.project-gallery{display:grid;grid-template-columns:1fr 1fr;grid-auto-flow:dense;gap:22px;padding-bottom:110px}
+.gallery-item{margin:0}
+.gallery-item.g-full{grid-column:span 2}
+.project-gallery:empty{display:none}
+.project-pager{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}
+.project-pager a{display:block;padding:46px 7.2%;transition:background .2s}
+.project-pager a+a{border-left:1px solid var(--line);text-align:right}
+.project-pager a:hover{background:var(--lime)}
+.pager-label{display:block;font:9px var(--mono);letter-spacing:.08em;color:var(--muted);margin-bottom:14px}
+.project-pager strong{font-size:clamp(18px,2.4vw,30px);letter-spacing:-.06em;font-weight:600}
+.project-cta{background:var(--lime);padding-top:80px;padding-bottom:80px;display:flex;justify-content:space-between;align-items:flex-end;gap:24px}
+.project-cta p{font-size:clamp(30px,5vw,64px);line-height:.98;letter-spacing:-.07em;font-weight:600;margin:0}
+
+@media(min-width:1400px){.project-pager a{padding-left:9%;padding-right:9%}}
+@media(max-width:760px){
+  .lang-switch{margin-left:auto;margin-right:8px}
+  .availability{display:none}
+  .sub-heading{margin-top:70px}
+  .lang-block{grid-template-columns:1fr;gap:12px;padding:23px 0}
+  .job.edu .job-number{display:none}
+  .testimonials{padding-top:85px;padding-bottom:85px}
+  .quote-grid{grid-template-columns:1fr;gap:55px;padding-top:40px}
+  .project-hero .eyebrow{margin-top:60px}
+  .project-facts{grid-template-columns:1fr 1fr}
+  .project-cover{padding-bottom:45px}
+  .project-body{grid-template-columns:1fr;gap:14px;padding-bottom:60px}
+  .project-gallery{grid-template-columns:1fr;gap:14px;padding-bottom:70px}
+  .gallery-item.g-full{grid-column:auto}
+  .project-pager{grid-template-columns:1fr}
+  .project-pager a+a{border-left:0;border-top:1px solid var(--line);text-align:left}
+  .project-cta{flex-direction:column;align-items:flex-start;padding-top:60px;padding-bottom:60px}
+}
