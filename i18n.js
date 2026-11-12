@@ -17,7 +17,7 @@ var I18N = {
     "nav.avail": "Available for projects",
     "lang.aria": "Language",
 
-    "hero.k1": "INDEPENDENT DESIGNER",
+    "hero.k1": "GRAPHIC DESIGNER",
     "hero.k2": "BASED IN MADRID, ES",
     "hero.k3": "AVAILABLE WORLDWIDE ↗",
     "hero.title": "Making ideas<br>feel <span class='serif-word'>something.</span>",
@@ -163,7 +163,7 @@ var I18N = {
     "nav.avail": "Disponible para proyectos",
     "lang.aria": "Idioma",
 
-    "hero.k1": "DISEÑADOR INDEPENDIENTE",
+    "hero.k1": "DISEÑADOR GRÁFICO",
     "hero.k2": "CON BASE EN MADRID, ES",
     "hero.k3": "DISPONIBLE EN TODO EL MUNDO ↗",
     "hero.title": "Ideas que<br>se <span class='serif-word'>sienten.</span>",
