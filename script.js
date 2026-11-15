@@ -98,5 +98,64 @@
     revealItems.forEach(function (item) { item.classList.add('is-visible'); });
   }
 
+  // Formatos aceitos nas imagens locais. Para aceitar outro formato, acrescente aqui.
+  var EXTS = ['jpg', 'png', 'gif', 'webp', 'jpeg'];
+
+  // ---------- Capas dos projetos ----------
+  // Usa assets/projects/<projeto>/cover.(jpg|png|gif|webp|jpeg) se o arquivo existir.
+  // Se não existir, a imagem que já está no HTML (link do Framer) continua sendo usada.
+  var useLocalCover = function (img, base) {
+    var i = 0;
+    (function next() {
+      if (i >= EXTS.length) return;
+      var probe = new Image();
+      probe.onload = function () { img.removeAttribute('srcset'); img.src = probe.src; };
+      probe.onerror = function () { i++; next(); };
+      probe.src = base + '.' + EXTS[i];
+    })();
+  };
+
+  document.querySelectorAll('a.project[href*="projects/"] .project-image img').forEach(function (img) {
+    var m = img.closest('a.project').getAttribute('href').match(/projects\/([^\/.]+)\.html/);
+    if (m) useLocalCover(img, 'assets/projects/' + m[1] + '/cover');
+  });
+
+  var coverImg = document.querySelector('.project-cover img');
+  var galleryEl = document.querySelector('.project-gallery[data-folder]');
+  if (coverImg && galleryEl) {
+    useLocalCover(coverImg, '../assets/projects/' + galleryEl.getAttribute('data-folder') + '/cover');
+  }
+
+  // ---------- Galeria dos projetos ----------
+  // Procura assets/projects/<pasta>/01 ... NN em vários formatos.
+  var gallery = galleryEl;
+  if (gallery) {
+    var folder = gallery.getAttribute('data-folder');
+    var max = parseInt(gallery.getAttribute('data-max') || '8', 10);
+
+    var addSlot = function (n) {
+      var name = (n < 10 ? '0' : '') + n;
+      var fig = document.createElement('figure');
+      fig.className = 'gallery-item';
+      var img = document.createElement('img');
+      img.alt = '';
+      img.loading = 'lazy';
+      var tried = 0;
+      img.onerror = function () {
+        tried++;
+        if (tried < EXTS.length) {
+          img.src = '../assets/projects/' + folder + '/' + name + '.' + EXTS[tried];
+        } else {
+          fig.remove();
+        }
+      };
+      img.src = '../assets/projects/' + folder + '/' + name + '.' + EXTS[0];
+      fig.appendChild(img);
+      gallery.appendChild(fig);
+    };
+
+    for (var n = 1; n <= max; n++) addSlot(n);
+  }
+
   applyLang();
 })();

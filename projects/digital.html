@@ -51,16 +51,9 @@
         <p data-i18n="p2.desc">Social media and digital campaign work: content systems, visual strategy and everyday formats built to keep a brand consistent across channels.</p>
       </section>
 
-      <!-- GALERIA: coloque as imagens em assets/projects/digital/ com os nomes 01.jpg, 02.jpg ... 06.jpg.
-           Slots sem arquivo desaparecem sozinhos. 01 e 04 ocupam a largura toda; os demais, meia largura. -->
-      <section class="project-gallery section-pad">
-        <figure class="gallery-item reveal g-full"><img src="../assets/projects/digital/01.jpg" alt="" loading="lazy" onerror="this.closest('figure').remove()"></figure>
-        <figure class="gallery-item reveal"><img src="../assets/projects/digital/02.jpg" alt="" loading="lazy" onerror="this.closest('figure').remove()"></figure>
-        <figure class="gallery-item reveal"><img src="../assets/projects/digital/03.jpg" alt="" loading="lazy" onerror="this.closest('figure').remove()"></figure>
-        <figure class="gallery-item reveal g-full"><img src="../assets/projects/digital/04.jpg" alt="" loading="lazy" onerror="this.closest('figure').remove()"></figure>
-        <figure class="gallery-item reveal"><img src="../assets/projects/digital/05.jpg" alt="" loading="lazy" onerror="this.closest('figure').remove()"></figure>
-        <figure class="gallery-item reveal"><img src="../assets/projects/digital/06.jpg" alt="" loading="lazy" onerror="this.closest('figure').remove()"></figure>
-      </section>
+      <!-- GALERIA: salve as imagens em assets/projects/digital/ com os nomes 01, 02, 03... em .jpg, .png, .gif ou .webp (extensão em minúsculas).
+           Imagens que não existirem somem sozinhas. Para aceitar mais de 8 imagens, aumente o data-max. -->
+      <section class="project-gallery section-pad" data-folder="digital" data-max="12"></section>
 
       <nav class="project-pager" aria-label="Projects">
         <a href="editorial.html"><span class="pager-label" data-i18n="proj.prev">← PREVIOUS PROJECT</span><strong data-i18n="p1.title">Exhibition & Editorial Design</strong></a>
