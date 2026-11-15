@@ -26,7 +26,7 @@ var I18N = {
     "hero.explore.aria": "Explore selected work",
     "hero.art.aria": "Selected visual design work",
     "hero.n1": "VISUAL<br>LANGUAGES<br><span>01 / 05</span>",
-    "hero.circle": "DESIGN<br>WITH<br>INTENT",
+    "hero.circle": "BASED<br>IN<br>MADRID",
     "hero.n2": "STRATEGY<br>MEETS CRAFT<br><span>EST. 2016</span>",
 
     "work.eyebrow": "A FEW THINGS I'VE MADE",
@@ -172,7 +172,7 @@ var I18N = {
     "hero.explore.aria": "Explorar proyectos seleccionados",
     "hero.art.aria": "Trabajos seleccionados de diseño visual",
     "hero.n1": "LENGUAJES<br>VISUALES<br><span>01 / 05</span>",
-    "hero.circle": "DISEÑO<br>CON<br>INTENCIÓN",
+    "hero.circle": "UBICADO<br>EN<br>MADRID",
     "hero.n2": "ESTRATEGIA<br>Y OFICIO<br><span>DESDE 2016</span>",
 
     "work.eyebrow": "ALGUNAS COSAS QUE HE HECHO",
